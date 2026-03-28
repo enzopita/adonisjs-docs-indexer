@@ -21,6 +21,14 @@ src/
     └── index.ts        # Elysia server with daily cron sync
 ```
 
+## Install as an agent skill
+
+```bash
+npx skills add https://github.com/enzopita/adonisjs-docs-indexer --skill adonisjs
+```
+
+This installs the `adonisjs` skill via [skills.sh](https://skills.sh), giving your AI agent access to the AdonisJS v7 documentation index.
+
 ## Quick start
 
 ```bash
