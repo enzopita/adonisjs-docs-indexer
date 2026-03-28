@@ -2,14 +2,23 @@
   "name": "adonisjs-docs-indexer",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "generate": "bun run src/cli/generate.ts",
+    "dev": "bun run --watch src/server/index.ts",
+    "serve": "bun run src/server/index.ts",
+    "lint": "oxlint src/",
+    "format": "oxfmt src/",
+    "format:check": "oxfmt --check src/",
+    "check": "oxlint src/ && oxfmt --check src/"
   },
   "dependencies": {
+    "@elysiajs/cron": "^1.4.1",
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@anthropic-ai/claude-code": "^2.1.86",
+    "bun-types": "latest",
+    "oxfmt": "^0.42.0",
+    "oxlint": "^1.57.0"
   },
-  "module": "src/index.js"
+  "module": "src/server/index.ts"
 }
